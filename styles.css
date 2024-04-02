@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'HarryPotter';
+    src: url('https://fonts.gstatic.com/s/harrypotter/v6/If_7Kwasyv-2hoRysc4P1wWg5d4q5vY.ttf') format('truetype');
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFC0CB; /* Baby pink color */
+    font-family: 'HarryPotter', sans-serif;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: navy;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #001f3f; /* Darker navy on hover */
+  }
+
+  @keyframes textAnimation {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  #message p {
+    opacity: 0; /* Initially hide the text */
+    animation: textAnimation 2s ease-out forwards; /* Adjust duration and timing function */
+  }
+  
+  #message p:nth-child(1) {
+    animation-delay: 1s; /* Delay animation for the first paragraph */
+  }
+  
+  #message p:nth-child(2) {
+    animation-delay: 2s; /* Delay animation for the second paragraph */
+  }
+  
+  #message p:nth-child(3) {
+    animation-delay: 3s; /* Delay animation for the third paragraph */
+  }
+  
+  
+  
+  #container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .balloon {
+    position: absolute;
+    animation: balloonFly 10s linear infinite;
+  }
+  
+  @keyframes balloonFly {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .balloon {
+    position: absolute;
+    animation: balloonFly 5s ease-in-out infinite;
+  }
+  
+  
+  #message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+    color: navy; /* Navy blue color for text */
+  }  
